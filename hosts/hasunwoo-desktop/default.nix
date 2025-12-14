@@ -10,5 +10,5 @@
     # DO NOT CHANGE AFTER INSTALLATION!
     system.stateVersion = "24.05";
 
-    config.my.virtualisation.libvirt.enable = true;
+    my.virtualisation.libvirt.enable = true;
 }

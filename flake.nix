@@ -10,7 +10,7 @@
         system = "x86_64-linux";
     in {
         nixosConfigurations = {
-            "hasunwoo-desktop" = lib.nixosSystem {
+            "hasunwoo-desktop" = nixpkgs.lib.nixosSystem {
                 inherit system;
 
                 modules = [

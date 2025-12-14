@@ -1,4 +1,4 @@
-{ config, pkgs, lib }:
+{ config, pkgs, lib, ... }:
 {
     users.users.hasunwoo = {
         isNormalUser = true;
@@ -19,5 +19,5 @@
 
     users.users.root = {
         hashedPassword = null;
-    }
+    };
 }
