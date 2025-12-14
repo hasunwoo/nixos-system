@@ -18,6 +18,7 @@
     };
 
     users.users.root = {
-        hashedPassword = null;
+        hashedPassword = "!";
+        shell = pkgs.nologin;
     };
 }
