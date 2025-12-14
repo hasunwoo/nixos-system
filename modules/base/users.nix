@@ -19,6 +19,6 @@
 
     users.users.root = {
         hashedPassword = "!";
-        shell = pkgs.nologin;
+        shell = pkgs.shadow.nologin;
     };
 }
