@@ -22,6 +22,7 @@ if lsblk -n "$DISK" | grep -q part; then
 fi
 
 # --- 파일시스템 초기화 ---
+chmod +x "$SCRIPT_DIR/format_fs.sh"
 "$SCRIPT_DIR/format_fs.sh" "$DISK"
 
 # --- system flake를 임시 디렉터리에 clone ---
@@ -44,7 +45,9 @@ mv "$TMP_DIR/nixos" "$NIXOS_DIR"
 rm -rf "$TMP_DIR"
 
 # --- 설치 ---
-nixos-install --flake "$NIXOS_DIR#$HOST"
+# 설치 시 임시로 링크
+ln -s /mnt/etc/nixos/secrets /etc/nixos/secrets
+nixos-install --flake "$NIXOS_DIR#$HOST" --impure
 
 echo "Install complete. Rebooting..."
 reboot

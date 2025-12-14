@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, secretsPath, ... }:
 let
     disks = import /etc/nixos/secrets/disks.nix;
 in
