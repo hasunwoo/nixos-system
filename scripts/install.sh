@@ -47,7 +47,7 @@ rm -rf "$TMP_DIR"
 # --- 설치 ---
 # 설치 시 임시로 링크
 ln -s /mnt/etc/nixos/secrets /etc/nixos/secrets
-nixos-install --flake "$NIXOS_DIR#$HOST" --impure
+nixos-install --flake "$NIXOS_DIR#$HOST" --impure --no-root-passwd
 
 echo "Install complete. Rebooting..."
 reboot
