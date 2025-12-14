@@ -49,10 +49,5 @@ rm -rf "$TMP_DIR"
 ln -s /mnt/etc/nixos/secrets /etc/nixos/secrets
 nixos-install --flake "$NIXOS_DIR#$HOST" --impure
 
-# root 잠금
-nixos-enter --root /mnt
-passwd -l root
-exit
-
 echo "Install complete. Rebooting..."
 reboot
