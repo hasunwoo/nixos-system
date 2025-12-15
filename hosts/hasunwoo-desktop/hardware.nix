@@ -7,7 +7,7 @@
         "hv_netvsc"
         "hv_utils"
         "hv_balloon"
-        "hv_drm"
+        "hyperv_drm"
     ];
 
     hardware.opengl = {
