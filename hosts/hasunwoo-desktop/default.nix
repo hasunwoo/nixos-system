@@ -2,6 +2,7 @@
 {
     imports = [
         ./hardware.nix
+        ../../modules/desktop/kde.nix
         ../../modules/base
     ];
 
