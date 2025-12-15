@@ -7,6 +7,9 @@
     services.displayManager.sddm.enable = true;
     services.displayManager.sddm.wayland.enable = false;
 
+    # X11은 SDDM용으로만 사용
+    services.xserver.enable = true;
+
     # KDE Plasma (Wayland)
     services.desktopManager.plasma6.enable = true;
 
