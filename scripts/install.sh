@@ -41,13 +41,17 @@ echo "Deploying system flake to $NIXOS_DIR"
 rm -rf "$NIXOS_DIR"
 mkdir -p /mnt/etc
 mv "$TMP_DIR/nixos" "$NIXOS_DIR"
-
+# 정리
 rm -rf "$TMP_DIR"
 
 # --- 설치 ---
 # 설치 시 임시로 링크
 ln -s /mnt/etc/nixos/secrets /etc/nixos/secrets
+# 루트 암호는 정책에 따라서 설정 안함
 nixos-install --flake "$NIXOS_DIR#$HOST" --impure --no-root-passwd
+
+# --- 정리 ---
+unlink /etc/nixos/secrets
 
 echo "Install complete. Rebooting..."
 reboot
