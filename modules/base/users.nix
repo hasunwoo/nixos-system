@@ -1,5 +1,7 @@
 { config, pkgs, lib, ... }:
 {
+    users.defaultUserShell = pkgs.zsh;
+
     security.sudo = {
         enable = true;
         wheelNeedsPassword = true;
