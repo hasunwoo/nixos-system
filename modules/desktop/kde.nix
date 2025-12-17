@@ -36,6 +36,6 @@
                 kdePackages.discover
             ];
         })
-    ]
+    ];
 }
 
