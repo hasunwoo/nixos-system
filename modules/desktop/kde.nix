@@ -26,7 +26,7 @@
     ];
 
     # discover app
-    lib.mkIf config.my.services.flatpak {
+    config = lib.mkIf config.my.services.flatpak.enable {
         environment.systemPackages = with pkgs; [
             kdePackages.discover
             kdePackages.discover-flatpak
