@@ -15,6 +15,7 @@
 
                 modules = [
                     ./hosts/hasunwoo-desktop
+                    ./modules/hardware/hyperv.nix
                 ];
             };
         };

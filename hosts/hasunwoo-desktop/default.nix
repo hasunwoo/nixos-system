@@ -1,7 +1,6 @@
 { config, pkgs, lib, ... }:
 {
     imports = [
-        ./hardware.nix
         ../../modules/desktop/kde.nix
         ../../modules/base
     ];
@@ -14,6 +13,7 @@
     # 서비스 설정
     my.virtualisation.libvirt.enable = true;
     my.services.openssh.enable = true;
+    my.services.flatpak.enable = true;
 
     # 기본 사용자 설정
     users.users.hasunwoo = {

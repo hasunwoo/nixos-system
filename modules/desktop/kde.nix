@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 {
     # XDG / DBus
     services.dbus.enable = true;
@@ -18,6 +18,11 @@
         noto-fonts
         noto-fonts-cjk-sans
         noto-fonts-emoji
+    ];
+
+    # xdg
+    xdg.portal.extraPortals = [
+        pkgs.xdg-desktop-portal-kde
     ];
 }
 
