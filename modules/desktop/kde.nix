@@ -21,14 +21,17 @@
             noto-fonts-emoji
         ];
 
+    } // lib.mkIf config.my.services.flatpak.enable {
         # xdg
+        xdg.portal.enable = true;
         xdg.portal.extraPortals = [
             pkgs.xdg-desktop-portal-kde
         ];
-    } // lib.mkIf config.my.services.flatpak.enable {
+        xdg.portal.config.common.default = "kde";
+
+        # discover app
         environment.systemPackages = with pkgs; [
             kdePackages.discover
-            kdePackages.discover-flatpak
         ];
     };
 }
