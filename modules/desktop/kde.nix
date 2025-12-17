@@ -24,5 +24,13 @@
     xdg.portal.extraPortals = [
         pkgs.xdg-desktop-portal-kde
     ];
+
+    # discover app
+    lib.mkIf config.my.services.flatpak {
+        environment.systemPackages = with pkgs; [
+            kdePackages.discover
+            kdePackages.discover-flatpak
+        ];
+    };
 }
 
