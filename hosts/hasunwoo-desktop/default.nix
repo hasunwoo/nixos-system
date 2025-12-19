@@ -2,6 +2,7 @@
 {
     imports = [
         ../../modules/desktop/kde.nix
+        ../../modules/base/ime.nix
         ../../modules/base
     ];
 
