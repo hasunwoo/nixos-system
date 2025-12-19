@@ -14,6 +14,7 @@
     my.virtualisation.libvirt.enable = true;
     my.services.openssh.enable = true;
     my.services.flatpak.enable = true;
+    my.services.pipewire.enable = true;
 
     # 기본 사용자 설정
     users.users.hasunwoo = {
