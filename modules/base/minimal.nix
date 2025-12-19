@@ -12,5 +12,6 @@
         vim
         curl
         wget
+        home-manager
     ];
 }
